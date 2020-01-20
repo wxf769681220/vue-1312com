@@ -1,0 +1,272 @@
+/*  */
+.animate {
+  position: relative;
+}
+
+.animate .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.animate:nth-of-type(1):before,
+.animate:nth-of-type(1):after,
+.animate:nth-of-type(1) .inner:before,
+.animate:nth-of-type(1) .inner:after {
+  background-color: #ffa726;
+  border: 2px solid yellow;
+}
+
+.animate:nth-of-type(2):before,
+.animate:nth-of-type(2):after,
+.animate:nth-of-type(2) .inner:before,
+.animate:nth-of-type(2) .inner:after {
+  background-color: #26a69a;
+}
+
+.animate:nth-of-type(3):before,
+.animate:nth-of-type(3):after,
+.animate:nth-of-type(3) .inner:before,
+.animate:nth-of-type(3) .inner:after {
+  background-color: #7e57c2;
+}
+
+.animate:before,
+.animate:after,
+.animate .inner:before,
+.animate .inner:after {
+  position: absolute;
+  content: "";
+  display: block;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.animate.horizontal:before,
+.animate.horizontal:after,
+.animate.both:before,
+.animate.both:after {
+  left: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+.animate.horizontal .inner:before,
+.animate.horizontal .inner:after,
+.animate.both .inner:before,
+.animate.both .inner:after {
+  top: 0;
+  width: 2px;
+  height: 100%;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+}
+
+.animate.horizontal .inner:before,
+.animate.both .inner:before {
+  left: 0;
+}
+
+.animate.horizontal .inner:after,
+.animate.both .inner:after {
+  right: 0;
+}
+
+.animate.horizontal .inner:hover:before,
+.animate.horizontal .inner:hover:after,
+.animate.both .inner:hover:before,
+.animate.both .inner:hover:after {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+.animate.horizontal:before,
+.animate.both:before {
+  top: 0;
+}
+
+.animate.horizontal:after,
+.animate.both:after {
+  bottom: 0;
+}
+
+.animate.horizontal:hover:before,
+.animate.horizontal:hover:after,
+.animate.both:hover:before,
+.animate.both:hover:after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.animate.horizontal:hover .inner:before,
+.animate.horizontal:hover .inner:after,
+.animate.both:hover .inner:before,
+.animate.both:hover .inner:after {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+.animate.horizontal.clockwise .inner:before,
+.animate.both.clockwise .inner:before {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.animate.horizontal.clockwise .inner:after,
+.animate.both.clockwise .inner:after {
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+
+.animate.horizontal.clockwise:before,
+.animate.both.clockwise:before {
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
+}
+
+.animate.horizontal.clockwise:after,
+.animate.both.clockwise:after {
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.animate.horizontal.clockwise:hover .inner:before,
+.animate.both.clockwise:hover .inner:before {
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+
+.animate.horizontal.clockwise:hover .inner:after,
+.animate.both.clockwise:hover .inner:after {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.animate.horizontal.clockwise:hover:before,
+.animate.both.clockwise:hover:before {
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.animate.horizontal.clockwise:hover:after,
+.animate.both.clockwise:hover:after {
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
+}
+
+.animate.horizontal.counterclockwise .inner:before,
+.animate.both.counterclockwise .inner:before {
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+
+.animate.horizontal.counterclockwise .inner:after,
+.animate.both.counterclockwise .inner:after {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.animate.horizontal.counterclockwise:before,
+.animate.both.counterclockwise:before {
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.animate.horizontal.counterclockwise:after,
+.animate.both.counterclockwise:after {
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
+}
+
+.animate.horizontal.counterclockwise:hover .inner:before,
+.animate.both.counterclockwise:hover .inner:before {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.animate.horizontal.counterclockwise:hover .inner:after,
+.animate.both.counterclockwise:hover .inner:after {
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+
+.animate.horizontal.counterclockwise:hover:before,
+.animate.both.counterclockwise:hover:before {
+  -webkit-transform-origin: right center;
+  transform-origin: right center;
+}
+
+.animate.horizontal.counterclockwise:hover:after,
+.animate.both.counterclockwise:hover:after {
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+}
+
+.animate.vertical:before,
+.animate.vertical:after {
+  top: 0;
+  width: 2px;
+  height: 100%;
+  -webkit-transform: scaleY(0);
+  transform: scaleY(0);
+}
+
+.animate.vertical:before {
+  left: 0;
+}
+
+.animate.vertical:after {
+  right: 0;
+}
+
+.animate.vertical:hover:before,
+.animate.vertical:hover:after {
+  -webkit-transform: scaleY(1);
+  transform: scaleY(1);
+}
+
+.animate.vertical.clockwise:before {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.animate.vertical.clockwise:after {
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+
+.animate.vertical.clockwise:hover:before {
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+
+.animate.vertical.clockwise:hover:after {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.animate.vertical.counterclockwise:before {
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
+
+.animate.vertical.counterclockwise:after {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.animate.vertical.counterclockwise:hover:before {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+}
+
+.animate.vertical.counterclockwise:hover:after {
+  -webkit-transform-origin: bottom center;
+  transform-origin: bottom center;
+}
